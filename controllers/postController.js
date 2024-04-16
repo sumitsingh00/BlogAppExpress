@@ -2,9 +2,12 @@ const Post = require("../models/postModel")
 
 exports.createPost = async (req, res) => {
     try{
-        const {title, body} = req.body;
-        const post = new Post({title, body });
-        const savedPost = await post.save();
+        const {title, body} = req.body;// already hum jason formate  bejh rhe hai
+        
+
+        const post = new Post({title, body });// post ka ek object bana
+        const savedPost = await post.save();// post me save kr diya
+        // const savedPost = await Post.create({title, body});
 
         res.json({
             post : savedPost

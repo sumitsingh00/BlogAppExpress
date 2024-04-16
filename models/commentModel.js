@@ -6,7 +6,9 @@ const mongoose = require('mongoose')
 const commentSchema = new mongoose.Schema({
     //  kis post pe commnet hai
     post:{
-        type:mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,// here you set the POST ID
+                                            // from the POSt colection, 
+                                            // so you can reference it
         ref : "Post" //reference to the post model
     },
     //   kisne like kia hai

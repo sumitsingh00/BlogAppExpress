@@ -16,12 +16,16 @@ const postSchema = new mongoose.Schema({
     } ,
     // post pe kitne likes hai
     likes : [{
-        type : mongoose.Schema.Types.ObjectId,
+        type : mongoose.Schema.Types.ObjectId,// here you set the liked ID
+                                              // from the Likes colection, 
+                                              // so you can reference it
         ref : "Like",
     }],
     // post pe kine comments hai
     comments : [{
-        type : mongoose.Schema.Types.ObjectId,
+        type : mongoose.Schema.Types.ObjectId,// here you set the comments ID
+                                                // from the comments colection, 
+                                                // so you can reference it
         ref : "Comment",
     }]
 })
